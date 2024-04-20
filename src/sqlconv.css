@@ -1,0 +1,153 @@
+body {
+    background-color: #1f1f1f;
+    color: beige;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 300px;
+    height: 100px;
+    background-color: #333;
+    border: 2px solid #555;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 100px;
+    transition: background-color 0.3s;
+    padding: 0;
+    position: relative;
+    box-shadow: 12px 13px 27px 5px rgba(0, 0, 0, 0.6);
+}
+
+.container:hover {
+    background-color: #444;
+}
+
+.container label {
+    color: rgb(255, 153, 0);
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.container input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#loading-overlay {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999;
+    box-shadow: 9px 11px 12px 8px rgba(0, 0, 0, 0.5);
+}
+
+.loading-message {
+    color: rgb(255, 153, 0);
+    font-size: 16px;
+    text-align: center;
+}
+
+.loading-dots {
+    display: inline-block;
+    font-size: 22px;
+}
+
+.loading-dots span {
+    opacity: 0;
+    animation: loadingDot 1s infinite;
+}
+
+.loading-dots span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loading-dots span:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.loading-dots span:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: -300px;
+    background-color: #333;
+    color: rgb(255, 153, 0);
+    padding: 10px;
+    border: 2px solid #555;
+    border-radius: 20px;
+    z-index: 9999;
+    transition: right 0.5s;
+    cursor: pointer;
+    box-shadow: 12px 13px 27px 5px rgba(0, 0, 0, 0.6);
+}
+
+.notification:hover {
+    background-color: #444;
+}
+
+.notification .close {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.notification .close:hover {
+    color: black;
+}
+
+@keyframes loadingDot {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+footer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    background-color: rgb(255, 153, 0);
+    padding: 0px;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transition: opacity 0.7s ease;
+}
+
+/* Scrollbar customization */
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: black;
+    background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background-color: rgb(255, 153, 0);
+    outline: 1px solid rgb(0, 0, 0);
+}

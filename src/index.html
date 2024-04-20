@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sqlconv.css">
+    <link rel="icon" type="image/png" href="../img/sql img.jpg">
+    <title>CSV to SQL</title>
+</head>
+<body>
+    <div class="container">
+        <label for="file-input">Upload Your CSV File Here</label>
+        <input type="file" id="file-input">
+    </div>
+
+    <br>
+    <table id="sql-output"></table>
+
+    <div id="loading-overlay">
+        <div class="loading-message">We are working on the file you uploaded<span class="loading-dots"><span>.</span><span>.</span><span>.</span></span></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CSV to SQL Commands Application</p>
+    </footer>
+
+    <script src="sqlconv.js"></script>
+</body>
+</html>
