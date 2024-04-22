@@ -23,7 +23,7 @@ fileInput.addEventListener('change', (e) => {
         setTimeout(() => {
             footer.style.display = 'none';
         }, 700);
-    }, 8000); // Hide notification box after 7 seconds
+    }, 8000); // Hide notification box after 8 seconds
 
     const reader = new FileReader();
     reader.onload = () => {
