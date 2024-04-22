@@ -10,6 +10,9 @@ fileInput.addEventListener('change', (e) => {
         return;
     }
 
+    // Moving the container of the file-input to the top of the screen
+    fileInput.parentNode.classList.add('file-uploaded');
+
     // Showing loading overlay
     loadingOverlay.style.display = 'block';
 
